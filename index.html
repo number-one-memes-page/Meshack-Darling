@@ -14,61 +14,61 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{background:var(--bg);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;text-align:center;overflow-x:hidden}
 .script{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400}
-section{position:relative;padding:64px 20px}
+section{position:relative;padding:34px 18px}
 #hearts{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
 .h{position:absolute;bottom:-40px;color:var(--mint);opacity:.7;animation:up linear infinite}
 .h:nth-child(3n+1){color:#00b48d}.h:nth-child(3n+2){color:#488da4}.h:nth-child(3n){color:#077e4a}
 @keyframes up{to{transform:translateY(-115vh) translateX(var(--sx)) rotate(25deg);opacity:0}}
-.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 20% 15%,#00b48d33,transparent 45%),radial-gradient(circle at 85% 80%,#488da433,transparent 50%),linear-gradient(180deg,var(--bg2),var(--bg))}
+.hero{padding-top:44px;padding-bottom:26px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 20% 15%,#00b48d33,transparent 45%),radial-gradient(circle at 85% 80%,#488da433,transparent 50%),linear-gradient(180deg,var(--bg2),var(--bg))}
 .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:8px;background:linear-gradient(90deg,#077e4a,#00b48d,#488da4)}
 .hero .small{letter-spacing:.35em;text-transform:uppercase;color:var(--gold);font-size:14px}
 .hero h1{font-size:clamp(46px,12vw,92px);line-height:1.1;margin:10px 0;color:#077e4a;background:linear-gradient(90deg,#077e4a,#00b48d 50%,#488da4);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero h1 span{display:block;font-size:.45em;-webkit-text-fill-color:#00b48d;color:#00b48d}
 .couple{display:block;width:min(260px,62vw);height:auto;max-height:48svh;object-fit:contain;filter:drop-shadow(0 10px 14px #0003);margin:8px auto;animation:bob 4s ease-in-out infinite}
 @keyframes bob{50%{transform:translateY(-8px)}}
-.scroll{margin-top:14px;color:var(--soft);font-size:15px;letter-spacing:.2em}
+.scroll{margin-top:8px;color:var(--soft);font-size:15px;letter-spacing:.2em}
 .welcome{max-width:640px;margin:auto}
-.welcome::after{content:"";display:block;width:120px;height:4px;margin:26px auto 0;border-radius:4px;background:linear-gradient(90deg,#077e4a,#00b48d,#488da4)}
+.welcome::after{content:"";display:block;width:120px;height:4px;margin:18px auto 0;border-radius:4px;background:linear-gradient(90deg,#077e4a,#00b48d,#488da4)}
 .welcome h2{font-size:clamp(38px,9vw,56px);color:var(--rose)}
 .welcome p{margin-top:14px;line-height:1.6}
-.verse{font-style:italic;color:var(--soft);margin-top:20px}
-.names{display:flex;flex-direction:column;gap:2px;margin-top:22px}
+.verse{font-style:italic;color:var(--soft);margin-top:14px}
+.names{display:flex;flex-direction:column;gap:0;margin-top:16px}
 .names b{font-size:24px;color:#077e4a}.names small{color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-size:13px}
 /* board */
 #boardSec{padding:0}
-.stick{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center}
+.stick{position:relative;display:flex;align-items:center;justify-content:center;padding:8px 0}
 .boardWrap{position:relative;width:min(420px,88vw)}
-.ropes{display:flex;justify-content:space-between;padding:0 18%;height:60px}
+.ropes{display:flex;justify-content:space-between;padding:0 18%;height:44px}
 .ropes i{width:3px;background:#488da4;transform-origin:bottom;display:block}
 .ropes i:first-child{transform:rotate(-8deg)}.ropes i:last-child{transform:rotate(8deg)}
-.board{position:relative;border-radius:14px;padding:38px 20px;color:#f1fffa;border:8px solid #488da4;outline:3px solid #00b48d;
+.board{position:relative;border-radius:14px;padding:30px 18px;color:#f1fffa;border:8px solid #488da4;outline:3px solid #00b48d;
 background:repeating-linear-gradient(95deg,#077e4a 0 14px,#06703f 14px 17px,#09895a 17px 30px);
 box-shadow:0 18px 40px #0005,inset 0 0 30px #0006}
 .board .t{letter-spacing:.3em;text-transform:uppercase;font-size:14px;color:#a8f0dc}
 .board .d{font-size:clamp(40px,12vw,60px);margin:6px 0;line-height:1.1}
 .board .w{font-size:22px;font-weight:600}.board .tm{margin-top:6px;color:#a8f0dc}
-#bf{position:absolute;inset:60px -12px -12px;z-index:3}
+#bf{position:absolute;inset:44px -12px -12px;z-index:3}
 .bw{position:absolute;will-change:transform,opacity}
 .bw svg{display:block;width:100%;height:auto;animation:flap .5s ease-in-out infinite alternate}
 @keyframes flap{to{transform:scaleX(.55)}}
-.hint{position:absolute;bottom:22px;left:0;right:0;color:var(--soft);font-size:15px;letter-spacing:.15em}
+.hint{display:none;position:absolute;bottom:22px;left:0;right:0;color:var(--soft);font-size:15px;letter-spacing:.15em}
 /* venue */
-.cards{display:grid;gap:20px;max-width:760px;margin:26px auto 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{position:relative;overflow:hidden;background:var(--card);border:1.5px solid #488da4;border-radius:18px;padding:26px 18px;backdrop-filter:blur(4px)}
+.cards{display:grid;gap:14px;max-width:760px;margin:18px auto 0;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{position:relative;overflow:hidden;background:var(--card);border:1.5px solid #488da4;border-radius:18px;padding:20px 16px;backdrop-filter:blur(4px)}
 .card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#077e4a,#00b48d,#488da4)}
 .card .ic{font-size:34px;margin-top:6px}.card h3{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:6px 0}
 .card p{font-size:24px;font-weight:600}
 .card a{display:inline-block;margin-top:14px;padding:10px 22px;border-radius:30px;background:linear-gradient(90deg,#077e4a,#00b48d);color:#fff;text-decoration:none;font-size:16px}
 h2.sec{font-size:clamp(38px,9vw,56px);color:var(--rose)}
-.cd{display:flex;justify-content:center;gap:12px;margin-top:22px;flex-wrap:wrap}
+.cd{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
 .cd div{min-width:74px;padding:14px 8px;border-radius:16px;color:#fff;background:linear-gradient(160deg,#077e4a,#00b48d 60%,#488da4);box-shadow:0 8px 18px #077e4a33}
 .cd b{display:block;font-size:34px;line-height:1}.cd span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;opacity:.9}
 .rv{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
-.acts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:16px}
 .btn{display:inline-block;padding:13px 26px;border-radius:30px;color:#fff;text-decoration:none;font-size:18px;font-family:inherit;border:0;cursor:pointer;background:linear-gradient(90deg,#077e4a,#00b48d);box-shadow:0 8px 18px #077e4a33}
 .btn.b{background:linear-gradient(90deg,#488da4,#00b48d)}
-footer{padding:50px 20px 70px;background:linear-gradient(135deg,#077e4a,#00b48d 55%,#488da4);color:#fff}
+footer{padding:32px 20px 36px;background:linear-gradient(135deg,#077e4a,#00b48d 55%,#488da4);color:#fff}
 footer .script{font-size:44px;color:#fff}
 </style>
 </head>
@@ -118,7 +118,7 @@ footer .script{font-size:44px;color:#fff}
     <div class="card rv"><div class="ic">⛪</div><h3>Prayer</h3><p>CSI Epiphany Church</p><a href="https://maps.app.goo.gl/NrNMb5ZhmGhx98fe9" target="_blank" rel="noopener">View Location</a></div>
     <div class="card rv"><div class="ic">🎉</div><h3>Fest</h3><p>R.C. Mahal</p><a href="https://maps.app.goo.gl/cBpmfD8cMc6XjDf18" target="_blank" rel="noopener">View Location</a></div>
   </div>
-  <p style="margin-top:26px;color:var(--soft)">Wednesday, 30 December 2026 · 10:30 AM</p>
+  <p style="margin-top:16px;color:var(--soft)">Wednesday, 30 December 2026 · 10:30 AM</p>
 </section>
 
 <section>
